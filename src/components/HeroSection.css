@@ -1,0 +1,46 @@
+/* src/components/HeroSection.css */
+.hero-section {
+  position: relative;
+  height: 70vh; /* Adjust as needed */
+  background: url('https://via.placeholder.com/1500x800/2b3a62/FFFFFF?text=Kuber+Group+Hero+Image') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden; /* To contain potential parallax effects or overlays */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+}
+
+.hero-content {
+  position: relative; /* Bring content above overlay */
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: var(--white); /* White text for contrast */
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+}
+
+.hero-content .btn-primary {
+  font-size: 1.1em;
+  padding: 15px 35px;
+}

@@ -1,0 +1,73 @@
+/* src/components/Header.css */
+.header {
+  background: var(--white);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--background-dark);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 40px; /* Adjust logo size */
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li {
+  margin-left: 30px;
+}
+
+.nav a {
+  color: var(--light-text-color);
+  font-weight: 600;
+  font-size: 1.05em;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav a:hover,
+.nav a.active { /* You can add an 'active' class for current page */
+  color: var(--primary-color);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
