@@ -1,7 +1,6 @@
-/* src/components/Header.css */
 .header {
   background: var(--white);
-  padding: 15px 0;
+  padding: 15px 20px;
   border-bottom: 1px solid var(--background-dark);
   box-shadow: var(--shadow);
   position: fixed;
@@ -20,27 +19,25 @@
 .logo {
   display: flex;
   align-items: center;
-  color: var(--secondary-color);
   font-size: 1.5em;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .logo img {
-  height: 40px; /* Adjust logo size */
+  height: 40px;
   margin-right: 10px;
 }
 
 .logo-text {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   color: var(--secondary-color);
 }
 
+/* Navigation */
 .nav ul {
   display: flex;
-}
-
-.nav li {
-  margin-left: 30px;
+  gap: 30px;
 }
 
 .nav a {
@@ -49,15 +46,16 @@
   font-size: 1.05em;
   padding: 5px 0;
   position: relative;
+  text-decoration: none;
 }
 
 .nav a:hover,
-.nav a.active { /* You can add an 'active' class for current page */
+.nav a.active {
   color: var(--primary-color);
 }
 
 .nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -70,4 +68,48 @@
 .nav a:hover::after,
 .nav a.active::after {
   width: 100%;
+}
+
+/* Hamburger Button (Hidden on Desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: var(--secondary-color);
+  }
+
+  .nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: var(--white);
+    width: 200px;
+    border-left: 1px solid var(--background-dark);
+    border-bottom: 1px solid var(--background-dark);
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav li {
+    margin: 0;
+  }
 }

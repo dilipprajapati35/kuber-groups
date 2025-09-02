@@ -1,22 +1,19 @@
-/* AboutUsPage.css */
-
 .about-us-page {
-    padding: 60px 0;
+    padding: 60px 20px;
     font-family: 'Arial', sans-serif;
     color: #333;
-    line-height: 1.7;
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Center the container */
-    padding: 60px 20px; /* Add horizontal padding */
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .page-title {
-    font-size: 3.5em;
-    color: #007bff; /* Primary color */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #007bff;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .page-title::after {
@@ -25,27 +22,27 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 120px;
-    height: 5px;
+    width: 100px;
+    height: 4px;
     background-color: #007bff;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
+/* Sections */
 section {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     background-color: #fff;
-    padding: 40px;
+    padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 section h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
     color: #333;
-    margin-bottom: 30px;
-    text-align: left;
+    margin-bottom: 25px;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
 
 section h2::after {
@@ -53,24 +50,15 @@ section h2::after {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 60px;
+    width: 50px;
     height: 3px;
-    background-color: #f1c40f; /* Accent color */
+    background-color: #f1c40f;
     border-radius: 2px;
 }
 
-.founder-message p,
-.company-vision p {
-    font-size: 1.15em;
-    margin-bottom: 20px;
-    color: #555;
-    text-align: justify;
-}
-
 .founder-message {
-    background-color: #eaf6ff; /* Light blue background for founder message */
-    border-left: 8px solid #007bff;
-    padding: 40px;
+    background-color: #eaf6ff;
+    border-left: 6px solid #007bff;
 }
 
 .founder-message h2 {
@@ -78,145 +66,113 @@ section h2::after {
 }
 
 .company-vision {
-    background-color: #f8f8f8; /* Slightly off-white for vision */
-    border-left: 8px solid #f1c40f;
-    padding: 40px;
+    background-color: #f8f8f8;
+    border-left: 6px solid #f39c12;
 }
 
 .company-vision h2 {
-    color: #f1c40f;
+    color: #f39c12;
 }
 
-/* Reusing Merits Grid Styles (assuming you have MeritsSection.css loaded or included) */
-/* If not, you'd copy the relevant styles from MeritsSection.css here. */
-/* For this example, I'll include basic styling for the merits grid */
+.founder-message p,
+.company-vision p {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    margin-bottom: 18px;
+    color: #555;
+    text-align: left; /* better for mobile readability */
+}
+
+/* Merits */
 .about-merits {
     background-color: #fff;
     border-radius: 12px;
-    padding: 40px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-}
-
-.about-merits h2 {
-    color: #333; /* Default H2 color for this section */
-    margin-bottom: 40px;
+    padding: 35px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .about-merits h2::after {
-    background-color: #007bff; /* Primary color for this underline */
+    background-color: #007bff;
 }
 
 .merits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* narrower min */
+    gap: 25px;
+    margin-top: 25px;
 }
 
 .merit-card {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 .merit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 .merit-card h3 {
-    font-size: 1.6em;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     color: #007bff;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .merit-card p {
-    font-size: 1em;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
     color: #666;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-
-/* Responsive adjustments */
+/* ✅ Responsive tweaks */
 @media (max-width: 992px) {
-    .page-title {
-        font-size: 3em;
-        margin-bottom: 50px;
-    }
-
-    section h2 {
-        font-size: 2em;
-        margin-bottom: 25px;
-    }
-
-    .founder-message p,
-    .company-vision p {
-        font-size: 1.1em;
-    }
-
     .about-us-page {
         padding: 50px 15px;
     }
 
     section {
-        padding: 30px;
+        padding: 28px;
     }
 }
 
 @media (max-width: 768px) {
-    .page-title {
-        font-size: 2.5em;
-        margin-bottom: 40px;
-    }
-
-    section h2 {
-        font-size: 1.8em;
-        margin-bottom: 20px;
-    }
-
-    .founder-message p,
-    .company-vision p {
-        font-size: 1em;
-    }
-
-    .merits-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .merit-card h3 {
-        font-size: 1.4em;
-    }
-
-    .merit-card p {
-        font-size: 0.95em;
+    .about-us-page {
+        padding: 40px 15px;
     }
 
     section {
-        padding: 25px;
+        padding: 22px;
+        margin-bottom: 40px;
+    }
+
+    .merits-grid {
+        grid-template-columns: 1fr; /* stack merits */
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
+    .about-us-page {
+        padding: 25px 12px;
+    }
+
     .page-title {
-        font-size: 2em;
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    section {
+        padding: 18px;
         margin-bottom: 30px;
     }
 
-    section h2 {
-        font-size: 1.6em;
-        margin-bottom: 15px;
-    }
-
-    .founder-message, .company-vision {
-        border-left-width: 5px;
-    }
-
-    .about-us-page {
-        padding: 30px 10px;
+    .founder-message,
+    .company-vision {
+        border-left-width: 4px;
     }
 }

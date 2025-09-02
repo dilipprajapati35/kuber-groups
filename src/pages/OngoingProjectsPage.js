@@ -1,20 +1,11 @@
-// src/pages/OngoingProjectsPage.js
+// OngoingProjectsPage.js
 import React from 'react';
-import ProjectCard from '../components/ProjectCard';
+import ProjectsPage from './ProjectsPage';
 import { ongoingProjects } from '../data/projectsData';
-import './ProjectsPage.css'; // We'll create this CSS file for both project pages
 
-const OngoingProjectsPage = () => {
-  return (
-    <div className="projects-page container">
-      <h1 className="page-title">Our Ongoing Projects</h1>
-      <div className="projects-grid">
-        {ongoingProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-    </div>
-  );
-};
+const OngoingProjectsPage = () => (
+  <ProjectsPage title="Our Ongoing Projects" projects={ongoingProjects} />
+);
 
 export default OngoingProjectsPage;
+

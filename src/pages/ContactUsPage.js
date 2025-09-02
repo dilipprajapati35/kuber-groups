@@ -1,12 +1,14 @@
 // src/pages/ContactUsPage.js
-import React, { useState } from 'react';
-import './ContactUsPage.css'; // We'll create this CSS file
+import React, { useState } from "react";
+import "./ContactUsPage.css"; // We'll create this CSS file
+import emailjs from "emailjs-com";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -15,10 +17,16 @@ const ContactUsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend server
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' }); // Clear form
+    emailjs.sendForm("service_id", "template_id", e.target, "user_id").then(
+      () => {
+        alert("Message sent successfully!");
+      },
+      (error) => {
+        console.error(error.text);
+        alert("Oops! Something went wrong.");
+      }
+    );
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -27,10 +35,18 @@ const ContactUsPage = () => {
 
       <div className="contact-details">
         <h2>Get in Touch</h2>
-        <p>We'd love to hear from you. Please reach out to us with any inquiries.</p>
-        <p><strong>Address:</strong> [Your Company Address Here, e.g., Kuber Towers, Ulwe, Panvel, Navi Mumbai]</p>
-        <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-        <p><strong>Email:</strong> info@kubergroup.com</p>
+        <p>
+          We'd love to hear from you. Please reach out to us with any inquiries.
+        </p>
+        <p>
+          <FaMapMarkerAlt /> Mumbai
+        </p>
+        <p>
+          <FaPhone /> +91 XXXXXXXXXX
+        </p>
+        <p>
+          <FaEnvelope /> info@kubergroup.com
+        </p>
       </div>
 
       <div className="contact-form-section">
@@ -56,6 +72,7 @@ const ContactUsPage = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
           </div>
           <div className="form-group">
@@ -69,7 +86,9 @@ const ContactUsPage = () => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn-primary">Send Message</button>
+          <button type="submit" className="btn-primary">
+            Send Message
+          </button>
         </form>
       </div>
 

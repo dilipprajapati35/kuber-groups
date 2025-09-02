@@ -1,21 +1,19 @@
-/* ProjectsPage.css */
-
 .projects-page {
-    padding: 60px 0;
+    padding: 60px 20px;
     font-family: 'Arial', sans-serif;
     color: #333;
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Center the container */
-    padding: 60px 20px; /* Add horizontal padding */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .page-title {
     font-size: 3.5em;
-    color: #007bff; /* Primary color */
+    color: #007bff;
     text-align: center;
     margin-bottom: 60px;
     position: relative;
     padding-bottom: 20px;
+    line-height: 1.2;
 }
 
 .page-title::after {
@@ -24,62 +22,52 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 150px;
-    height: 5px;
+    width: 120px;
+    height: 4px;
     background-color: #007bff;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjust minmax for card size */
-    gap: 30px; /* Space between project cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-/* Ensure ProjectCard.css is imported or its styles are also available here */
-/* (The ProjectCard component will bring its own styles, but the grid manages its layout) */
-
-
-/* Responsive adjustments */
+/* Tablet */
 @media (max-width: 992px) {
     .page-title {
-        font-size: 3em;
+        font-size: 2.8em;
         margin-bottom: 50px;
     }
-
-    .projects-page {
-        padding: 50px 15px;
-    }
-
     .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 25px;
     }
 }
 
+/* Mobile Landscape */
 @media (max-width: 768px) {
     .page-title {
-        font-size: 2.5em;
+        font-size: 2.2em;
         margin-bottom: 40px;
     }
-
     .projects-grid {
-        grid-template-columns: 1fr; /* Stack cards on very small screens */
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
-    }
-
-    .projects-page {
-        padding: 40px 15px;
     }
 }
 
+/* Mobile Portrait */
 @media (max-width: 576px) {
     .page-title {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-bottom: 30px;
     }
-
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
     .projects-page {
-        padding: 30px 10px;
+        padding: 20px 15px;
     }
 }
