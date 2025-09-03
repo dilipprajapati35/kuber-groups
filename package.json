@@ -2,7 +2,7 @@
   "name": "kuber-groups",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://diliprajpati35.github.io/kuber-groups",
+  "homepage": "https://kubergroups.com",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
