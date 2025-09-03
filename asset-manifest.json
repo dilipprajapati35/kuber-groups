@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/kuber-groups/static/css/main.2ee9def0.css",
+    "main.js": "/kuber-groups/static/js/main.5edb5168.js",
+    "static/js/453.1765cd5a.chunk.js": "/kuber-groups/static/js/453.1765cd5a.chunk.js",
+    "static/media/kuber-logo.png": "/kuber-groups/static/media/kuber-logo.387d5050562b9dadf4fa.png",
+    "static/media/singleproject7.jpg": "/kuber-groups/static/media/singleproject7.45721ba07ab21176fd24.jpg",
+    "static/media/singleproject2.jpg": "/kuber-groups/static/media/singleproject2.ba5b85fbd45a76ace5b7.jpg",
+    "static/media/singleproject6.jpg": "/kuber-groups/static/media/singleproject6.e445cc58151b6bb30f67.jpg",
+    "static/media/singleproject9.jpg": "/kuber-groups/static/media/singleproject9.e445cc58151b6bb30f67.jpg",
+    "static/media/singleproject5.jpg": "/kuber-groups/static/media/singleproject5.5d298938872c8aaf6a23.jpg",
+    "static/media/singleproject4.jpg": "/kuber-groups/static/media/singleproject4.d9b1b7ffa8ec3d7738e7.jpg",
+    "index.html": "/kuber-groups/index.html",
+    "main.2ee9def0.css.map": "/kuber-groups/static/css/main.2ee9def0.css.map",
+    "main.5edb5168.js.map": "/kuber-groups/static/js/main.5edb5168.js.map",
+    "453.1765cd5a.chunk.js.map": "/kuber-groups/static/js/453.1765cd5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ee9def0.css",
+    "static/js/main.5edb5168.js"
+  ]
+}
