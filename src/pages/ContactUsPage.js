@@ -39,13 +39,14 @@ const ContactUsPage = () => {
           We'd love to hear from you. Please reach out to us with any inquiries.
         </p>
         <p>
-          <FaMapMarkerAlt /> Mumbai
+          <FaMapMarkerAlt /> Plot no 18 & 19, Sector 15, CBD Belapur, Navi
+          Mumbai, Maharashtra 400614
         </p>
         <p>
-          <FaPhone /> +91 XXXXXXXXXX
+          <FaPhone /> 022 49783318
         </p>
         <p>
-          <FaEnvelope /> info@kubergroup.com
+          <FaEnvelope /> kuber.enterprises06@gmail.com
         </p>
       </div>
 
