@@ -1,15 +1,18 @@
 // src/pages/HomePage.js
-import React from 'react';
-import HeroSection from '../components/HeroSection';
-import MeritsSection from '../components/MeritsSection';
-// You might add a section for "Featured Projects" here later
+import React from "react";
+
+import HeroSection from "../components/HeroSection";
+import FeaturedProjects from "../components/FeaturedProjects";
+import WhyChooseUs from "../components/WhyChooseUs";
+import MeritsSection from "../components/MeritsSection";
 
 const HomePage = () => {
   return (
     <div className="home-page">
       <HeroSection />
+      <FeaturedProjects />
+      <WhyChooseUs />
       <MeritsSection />
-      {/* Add sections for featured projects, testimonials, etc. */}
     </div>
   );
 };

@@ -1,7 +1,55 @@
 // src/data/projectsData.js
 
 export const ongoingProjects = [
+
   {
+    id: "kuber-empire",
+    name: "Kuber Empire",
+    location: "ULWE, PANVEL",
+    year: "N/A", // Assuming from image absence
+    area: "2750 Sq Mtrs",
+    type: "Commercial + Residential",
+    details: "1 Building of 13 Storey 96 Flat & 19 Shop",
+    imageUrl:
+     require('../assets/kuber-empire.jpg'),
+  },
+  {
+    id: "kuber-heritage",
+    name: "Kuber Heritage",
+    location: "ULWE, PANVEL",
+    year: "N/A",
+    area: "2750 Sq Mtrs",
+    type: "Commercial + Residential",
+    details: "1 Building of 7 Storey",
+    imageUrl:
+     require('../assets/kuber-heritage.jpg'),
+  },
+   {
+    id: "nakshatra",
+    name: "Nakshatra",
+    location: "ULWE, PANVEL",
+    year: "N/A", // Year not clearly visible, assuming from context if needed
+    area: "1900 Sq Mtrs",
+    type: "Commercial + Residential property",
+    details: "1 Building Of 14 Storey 92 Flat & 08 Shop",
+    imageUrl:
+      require('../assets/NAKSHATRA.png'), // Replace with your image URL
+  },
+  {
+    id: "hill-view",
+    name: "Hill View",
+    location: "Chembur, Mumbai",
+    year: "N/A",
+    area: "N/A", // Not clearly visible
+    type: "Commercial + Residential property",
+    details: "1 Building Of 34 Storey 248 Flat & 15 Shop",
+    imageUrl:
+      require('../assets/hill-view.png'), // Replace with your image URL
+  },
+];
+
+export const completedProjects = [
+    {
     id: "pragati-villa",
     name: "Pragati Villa",
     location: "ULWE, PANVEL",
@@ -10,8 +58,9 @@ export const ongoingProjects = [
     type: "Commercial + Residential",
     details: "1 Building Of 4 Storey 24 Flat 06 Shop",
     imageUrl:
-      require('../assets/singleproject2.jpg'), // Replace with your image URL
+      require('../assets/pragati-villa.jpg'), // Replace with your image URL
   },
+  
   {
     id: "kuber-villa",
     name: "Kuber Villa",
@@ -21,69 +70,54 @@ export const ongoingProjects = [
     type: "Commercial + Residential property",
     details: "1 Building Of 4 Storey 20 Flat & 05 Shop",
     imageUrl:
-     require('../assets/singleproject4.jpg'), // Replace with your image URL
+     require('../assets/kuber-villa.jpg'), // Replace with your image URL
   },
-  {
-    id: "kuber-empire",
-    name: "KUBER EMPIRE",
+    {
+    id: "pragati-avenue",
+    name: "Pragati Avenue",
     location: "ULWE, PANVEL",
-    year: "N/A", // Assuming from image absence
-    area: "2750 Sq Mtrs",
-    type: "Commercial + Residential",
-    details: "1 Building of 13 Storey 96 Flat & 19 Shop",
-    imageUrl:
-     require('../assets/singleproject7.jpg'),// Replace with your image URL
-  },
-  // Add other ongoing projects here
-];
-
-export const completedProjects = [
-  {
-    id: "pragati-homes",
-    name: "Pragati Homes",
-    location: "ULWE, PANVEL",
-    year: "2018",
-    area: "550 Sq Mtrs",
+    year: "2016",
+    area: "1150 Sq Mtrs",
     type: "Residential",
-    details: "1 Building Of 07 Storey 28 Flat",
+    details: "1 Building Of 63 Storey 24 Flat",
     imageUrl:
-     require('../assets/singleproject5.jpg'), // Replace with your image URL
+      require('../assets/pragati-avenue.jpg'), // Replace with your image URL
   },
+    {
+    id: "moral-orchid",
+    name: "Moral Orchid",
+    location: "ULWE, PANVEL",
+    year: "2020",
+    area: "1050 Sq Mtrs",
+    type: "Commercial + Residential",
+    details: "1 Building Of 11 Storey 44 Flat & 06 Shop",
+    imageUrl:
+      require('../assets/moral-orchid.jpg'), // Replace with your image URL
+  },
+
   {
-    id: "pragati-sparsh",
-    name: "Pragati Sparsh",
+    id: "millienium-icon",
+    name: "Millienium Icon",
     location: "ULWE, PANVEL",
     year: "2018",
-    area: "400 Sq Mtrs",
+    area: "1050 Sq Mtrs",
     type: "Commercial + Residential",
-    details: "1 Building Of 04 Storey 16 Flat & 04 Shop",
+    details: "1 Building Of 11 Storey 44 Flat & 06 Shop",
     imageUrl:
-     require('../assets/singleproject9.jpg'), // Replace with your image URL
+     require('../assets/millienium-icon.jpg'), // Replace with your image URL
   },
   {
-    id: "nakshatra",
-    name: "NAKSHATRA",
+    id: "pragati-crystal",
+    name: "Pragati Crystal",
     location: "ULWE, PANVEL",
-    year: "N/A", // Year not clearly visible, assuming from context if needed
-    area: "1900 Sq Mtrs",
-    type: "Commercial + Residential property",
-    details: "1 Building Of 14 Storey 92 Flat & 08 Shop",
+    year: "2014",
+    area: "1450 Sq Mtrs",
+    type: "Commercial + Residential",
+    details: "1 Building Of 11 Storey 66 Flat & 06 Shop",
     imageUrl:
-      require('../assets/singleproject7.jpg'), // Replace with your image URL
+     require('../assets/pragati-crystal.jpg'), // Replace with your image URL
   },
-  {
-    id: "hill-view",
-    name: "HILL VIEW",
-    location: "Chembur, Mumbai",
-    year: "N/A",
-    area: "N/A", // Not clearly visible
-    type: "Commercial + Residential property",
-    details: "1 Building Of 34 Storey 248 Flat & 15 Shop",
-    imageUrl:
-      require('../assets/singleproject6.jpg'), // Replace with your image URL
-  },
-  // Add other completed projects here
-];
+ ];
 
 export const meritsData = [
   {

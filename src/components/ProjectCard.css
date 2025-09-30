@@ -1,30 +1,168 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Modal Styles */
+.project-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+
+.project-modal {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 650px;
+    width: 92vw;
+    max-height: 86vh;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+    padding: 38px 28px 28px 28px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    animation: modalPopIn 0.3s cubic-bezier(.4,1.4,.6,1);
+}
+
+@keyframes modalPopIn {
+  0% { transform: scale(0.92) translateY(40px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #888;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.2s, transform 0.2s;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-close:hover, .modal-close:focus {
+    color: #007bff;
+    background: #f2f8ff;
+    transform: scale(1.12) rotate(8deg);
+}
+
+.project-modal-image {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    object-fit: cover;
+}
+
+.project-modal-info {
+    width: 100%;
+    text-align: left;
+}
+.project-modal-info h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: #007bff;
+}
+.project-modal-info p {
+    font-size: 1.08em;
+    margin-bottom: 10px;
+    color: #444;
+}
+.project-modal-info p strong {
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .project-modal {
+        padding: 18px 8px 12px 8px;
+        max-width: 98vw;
+    }
+    .project-modal-image {
+        max-width: 98vw;
+        margin-bottom: 16px;
+    }
+    .project-modal-info h2 {
+        font-size: 1.3rem;
+    }
+}
 .project-card {
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(.4,1.4,.6,1), box-shadow 0.3s cubic-bezier(.4,1.4,.6,1);
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+}
+
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
 }
 
 .project-image {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
     border-bottom: 1px solid #eee;
-    background-color: #f2f2f2; /* fallback if image fails */
-    transition: transform 0.3s ease;
+    background-color: #f2f2f2;
+    transition: transform 0.3s cubic-bezier(.4,1.4,.6,1);
+    display: block;
+}
+
+.project-image-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg,rgba(0,0,0,0.08) 0%,rgba(0,0,0,0.18) 100%);
+    pointer-events: none;
+    border-bottom: 1px solid #eee;
 }
 
 .project-card:hover .project-image {
-    transform: scale(1.03);
+    transform: scale(1.06) rotate(-0.5deg);
 }
 
 .project-info {
@@ -55,22 +193,30 @@
 
 .btn-secondary {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 13px 32px;
     margin-top: 20px;
-    background-color: #007bff;
+    background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(0,123,255,0.08);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
     border: none;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.08em;
+    font-weight: 600;
     align-self: flex-start;
+    letter-spacing: 0.02em;
 }
 
-.btn-secondary:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.btn-secondary:hover, .btn-secondary:focus {
+    background: linear-gradient(90deg, #0056b3 60%, #00aaff 100%);
+    box-shadow: 0 4px 20px rgba(0,123,255,0.16);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.project-view-btn {
+    margin-top: 18px;
 }
 
 /* Responsive adjustments */

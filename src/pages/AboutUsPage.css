@@ -1,3 +1,14 @@
+/* Fade-in scroll animation */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
+}
+.fade-in-visible {
+    opacity: 1 !important;
+    transform: none !important;
+}
 .about-us-page {
     padding: 60px 20px;
     font-family: 'Arial', sans-serif;
@@ -130,6 +141,59 @@ section h2::after {
     line-height: 1.5;
 }
 
+.founder-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.founder-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin-bottom: 18px;
+    background: #fff;
+    border: 3px solid #007bff22;
+}
+
+.founder-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #007bff 60%, #00c6ff 100%);
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    border: 3px solid #007bff22;
+    margin-bottom: 18px;
+    letter-spacing: 0.05em;
+}
+
+.founder-signature {
+    margin-top: 18px;
+    font-family: 'Dancing Script', cursive, Arial, sans-serif;
+    font-size: 1.2rem;
+    color: #007bff;
+    opacity: 0.85;
+    letter-spacing: 0.04em;
+}
+
+.merit-icon {
+    color: #007bff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 /* ✅ Responsive tweaks */
 @media (max-width: 992px) {
     .about-us-page {
@@ -153,6 +217,15 @@ section h2::after {
 
     .merits-grid {
         grid-template-columns: 1fr; /* stack merits */
+    }
+
+    .founder-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .founder-img {
+        margin-bottom: 0;
     }
 }
 
