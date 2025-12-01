@@ -49,21 +49,21 @@ export const ongoingProjects = [
 ];
 
 export const completedProjects = [
-    {
-    id: "pragati-villa",
-    name: "Pragati Villa",
-    location: "ULWE, PANVEL",
-    year: "2021",
-    area: "500 Sq Mtrs",
-    type: "Commercial + Residential",
-    details: "1 Building Of 4 Storey 24 Flat 06 Shop",
-    imageUrl:
-      require('../assets/pragati-villa.jpg'), // Replace with your image URL
-  },
+  //   {
+  //   id: "pragati-villa",
+  //   name: "Pragati Villa",
+  //   location: "ULWE, PANVEL",
+  //   year: "2021",
+  //   area: "500 Sq Mtrs",
+  //   type: "Commercial + Residential",
+  //   details: "1 Building Of 4 Storey 24 Flat 06 Shop",
+  //   imageUrl:
+  //     require('../assets/pragati-villa.jpg'), // Replace with your image URL
+  // },
   
   {
     id: "kuber-villa",
-    name: "Kuber Villa",
+    name: "Kuber Homes",
     location: "ULWE, PANVEL",
     year: "2021",
     area: "340 Sq Mtrs",
@@ -135,11 +135,11 @@ export const meritsData = [
     description:
       "Dedicated research team to keep in sync with the recent technologies & trends in the real estate world, making sure new age living solutions for our customers.",
   },
-  {
-    title: "Tech. Expertise",
-    description:
-      "State of the art Technical Support for construction in terms of hi-tech equipment like own RMC plant, JCB & other new age machinery for construction.",
-  },
+  // {
+  //   title: "Tech. Expertise",
+  //   description:
+  //     "State of the art Technical Support for construction in terms of hi-tech equipment like own RMC plant, JCB & other new age machinery for construction.",
+  // },
   {
     title: "Trust",
     description:
